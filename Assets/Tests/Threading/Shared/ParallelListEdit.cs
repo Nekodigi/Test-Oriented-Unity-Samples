@@ -7,7 +7,7 @@ using Debug = UnityEngine.Debug;
 
 namespace Tests.Threading.Shared
 {
-    public class ParallelListRW
+    public class ParallelListEdit
     {
         private const int N = 100;
         private const int Delay = 10;

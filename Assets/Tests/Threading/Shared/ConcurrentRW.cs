@@ -6,14 +6,14 @@ using UnityEngine;
 
 namespace Tests.Threading.Shared
 {
-    public class ContinuousReadingWhileWriting
+    public class ConcurrentRW
     {
         private const int N = 10;
         private readonly ConcurrentQueue<TestObject> _queue = new();
         private readonly List<TestObject> _sharedList = new();
 
         [Test]
-        public async Task ContinuousReadingWhileWritingTest()
+        public async Task ConcurrentRWTest()
         {
             //try to run reader and writer at same time.
             var readerTask = Reader();
